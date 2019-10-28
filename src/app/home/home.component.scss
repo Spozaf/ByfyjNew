@@ -1,11 +1,16 @@
 @import "./../../scss/variables.scss";
-@import './../../scss/mixins.scss';
+@import "./../../scss/mixins.scss";
 
-%image-basics{
+%image-basics {
   width: 95vw;
   height: 45vh;
   transform: translateY(-9rem);
-  img{
+  @include breakpoint(mobile-horizontal) {
+    width: 95vh;
+    height: 45vw;
+  }
+
+  img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -15,30 +20,33 @@
   }
 }
 
-%info-basics{
+%info-basics {
   width: 85vw;
-      height: 40vh;
-      background-color: $color-main-light;
-      border-radius: 0 50% 50% 0;
-      border-top: 2px solid $color-main-dark;
-      border-bottom:  2px solid $color-main-dark;
-      border-right:  2px solid $color-main-dark;
+  height: 40vh;
+  background-color: $color-main-light;
+  border-radius: 0 50% 50% 0;
+  border-top: 2px solid $color-main-dark;
+  border-bottom: 2px solid $color-main-dark;
+  border-right: 2px solid $color-main-dark;
+  @include breakpoint(mobile-horizontal) {
+    width: 85vh;
+    height: 40vw;
+  }
 }
 
-%text-basics{
+%text-basics {
   color: $color-main-dark;
-        padding-left: 2rem;
-        h1{
-          font-size: $font-size-big;
-          transform: translateY(2.5rem);
-          font-weight: inherit;
-        }
-        p{
-          font-size: $font-size-small;
-          margin-bottom: 1rem;
-        }
+  padding-left: 2rem;
+  h1 {
+    font-size: $font-size-big;
+    transform: translateY(2.5rem);
+    font-weight: inherit;
+  }
+  p {
+    font-size: $font-size-small;
+    margin-bottom: 1rem;
+  }
 }
-
 
 .home {
   &__image {
@@ -49,6 +57,9 @@
     background-position: center;
     position: relative;
     @include shadow;
+    @include breakpoint(mobile-horizontal) {
+      height: 100vw;
+    }
 
     &--textUp {
       h1 {
@@ -58,6 +69,10 @@
         padding-bottom: 44.4rem;
         transform: rotateZ(45deg);
         color: $color-main-dark;
+        @include breakpoint(mobile-horizontal) {
+          padding-right: 55.4rem;
+          padding-bottom: 137.4rem;
+        }
       }
     }
     &--textDown {
@@ -73,79 +88,95 @@
       }
     }
 
-    &--b{
+    &--b {
       @include center;
-      opacity: .9;
+      opacity: 0.9;
     }
 
-    &--b-1{
+    &--b-1 {
       width: 60vw;
       height: 25vh;
       background-color: $color-main-light;
       border-radius: 0 50% 50% 0;
       transform: translateY(6rem);
+      @include breakpoint(mobile-horizontal) {
+        width: 60vh;
+        height: 25vw;
+      }
     }
-    &--b-2{
+    &--b-2 {
       width: 70vw;
       height: 30vh;
       background-color: $color-main-light;
       border-radius: 0 50% 50% 0;
+      @include breakpoint(mobile-horizontal) {
+        width: 70vh;
+        height: 30vw;
+      }
     }
 
-    &--logo{
+    &--logo {
       @include center;
-      img{
+      img {
         width: 45vw;
         height: 20vh;
         transform: translate(-2.5rem, 3rem);
+        @include breakpoint(mobile-horizontal) {
+          width: 45vh;
+          height: 20vw;
+        }
       }
-      
     }
   }
 
-  &__usluga{
+  &__usluga {
     margin-top: 3rem;
     margin-bottom: -7rem;
-    &--info{
+    &--info {
       @extend %info-basics;
       @include shadow-small;
-      &-text{
+      &-text {
         @extend %text-basics;
       }
     }
 
-    &--info-r{
+    &--info-r {
       @extend %info-basics;
       margin-left: 15vw;
       border-radius: 50% 0 0 50%;
-      border-right:  none;
-      border-left:  2px solid $color-main-dark;
-      &-text{
+      border-right: none;
+      border-left: 2px solid $color-main-dark;
+      &-text {
         @extend %text-basics;
         text-align: right;
         margin-right: 2rem;
       }
+      @include breakpoint(mobile-horizontal) {
+        margin-left: 60vw;
+      }
     }
 
-
-    &--image{
+    &--image {
       @extend %image-basics;
     }
 
-    &--image-r{
+    &--image-r {
       @extend %image-basics;
-      img{
+      img {
         border-radius: 50% 0 0 50%;
       }
       margin-left: 5vw;
+      @include breakpoint(mobile-horizontal) {
+        margin-left: 55vw;
+      }
     }
   }
 
-  &__divider{
+  &__divider {
     height: 14vw;
     position: relative;
 
-    &--line{
+    &--line {
       width: 31vw;
       margin-left: 6vw;
       margin-right: 6vw;
@@ -154,32 +185,31 @@
       border-top: 2px solid $color-main-dark;
     }
 
-    &--icon{
+    &--icon {
       display: inline-block;
-      img{
+      img {
         height: 14vw;
       }
     }
   }
 }
 
-:host{
-  .my-prompt{
-
-    .title{
+:host {
+  .my-prompt {
+    .title {
       font-size: $font-size-middle-big;
       text-align: center;
-      h1{
+      h1 {
         font-weight: inherit;
       }
     }
-    .text{
+    .text {
       font-size: $font-size-small;
-      &__center{
+      &__center {
         text-align: center;
       }
     }
-    footer{
+    footer {
       margin-top: 2rem;
       text-align: center;
     }
