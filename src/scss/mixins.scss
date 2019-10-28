@@ -1,0 +1,56 @@
+@import './../scss/variables.scss';
+
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin shadow {
+    -webkit-box-shadow: 0px 0px 5px 0px $color-main-dark;
+    -moz-box-shadow: 0px 0px 5px 0px $color-main-dark;
+    box-shadow: 0px 0px 5px 0px $color-main-dark; 
+}
+@mixin shadow-small {
+    -webkit-box-shadow: 0px 0px 2px 0px $color-main-dark;
+    -moz-box-shadow: 0px 0px 2px 0px $color-main-dark;
+    box-shadow: 0px 0px 2px 0px $color-main-dark; 
+}
+
+
+@mixin breakpoint($point, $value: 0) {
+    @if $point == mobile {
+          @media (min-width: 320px) { @content; }
+      }
+  
+      @else if $point == mobile-horizontal {
+          @media (min-width: 480px) { @content; }
+      }
+  
+      @else if $point == tablet {
+          @media (min-width: 768px) { @content; }
+      }
+  
+      @else if $point == tablet-horizontal {
+          @media (min-width: 1024px) { @content; }
+      }
+      
+      @else if $point == desktop {
+          @media (min-width: 1280px) { @content; }
+      }
+  
+      @else if $point == desktop-wide {
+          @media (min-width: 1500px) { @content; }
+      }
+  
+      @else {
+          @media ($point: $value) { @content; }
+      }
+  }
+  
+  @mixin between-breakpoints($min, $max) {
+      @media (min-width: $min) and (max-width: $max) {
+          @content;
+      }
+  }

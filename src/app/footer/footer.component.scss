@@ -1,0 +1,48 @@
+@import './../../scss/variables.scss';
+@import './../../scss/mixins.scss';
+
+footer{
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: $color-main-dark;
+   color: white;
+   min-height: 20vh;
+   @include shadow;
+   position: relative;
+}
+.column{
+
+    width: 40vw;
+    margin-left: 10vw;
+    display: inline-block;
+    
+    &__info{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    h1{
+        font-size: $font-size-middle-big;
+    }
+    &__row{
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        &--icon{
+            display: inline-block;
+            margin-bottom: 1rem;
+            img{
+                width: 1.5rem;
+                margin-right: .5rem;
+            }
+        }
+
+        &--text{
+            display: inline-block;
+            font-size: 1.7rem;
+        }
+    }
+}

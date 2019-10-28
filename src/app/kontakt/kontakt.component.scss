@@ -1,0 +1,49 @@
+@import './../../scss/variables.scss';
+
+.kontakt{
+    color: $color-main-dark;
+
+    &__miasto{
+        padding: 3rem;
+        h1{
+            font-size: $font-size-big;
+            transform: translateY(2rem);
+            text-align: center;
+        }
+        h2{
+            font-size: $font-size-middle;
+            img{
+                height: $font-size-middle;
+                transform: translateY(20%);
+            }
+        }
+        p{
+            font-size: $font-size-middle-small;
+            img{
+                height: $font-size-middle-small;
+            }
+        }
+        &--map{
+            padding-top: 2rem;
+            width: 100%;
+            height: 90vw;
+            iframe{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    &__info{
+        text-align: center;
+        margin-bottom: 2rem;
+        h1{
+            padding-top: 1rem;
+            font-size: $font-size-middle;
+        }
+        h2{
+            
+            font-size: $font-size-middle-small;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+<div class="navbar">
+    <ul>
+        <li><a (click)="sideMenu()"><img src="./../../assets/menu.png" alt="" class="navbar__icon">
+                <h1 class="navbar__text">Menu</h1>
+            </a></li>
+    </ul>
+</div>
+
+<div class="navbar__side" [style.width.%]="sideMenuWidth">
+    <a class="navbar__side--close-btn">
+        <p (click)="topMenu()"> &times;</p>
+    </a>
+    <img (click)="topMenu()" src="./../../assets/logoByfyj.png" alt="" class="navbar__side--logo">
+
+    <ul>
+        <li>
+            <a routerLink="/" (click)="topMenu()">
+                <h1>Byfyj</h1>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/menu" (click)="topMenu()">
+                <h1>Menu</h1>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/kontakt" (click)="topMenu()">
+                <h1>Kontakt</h1>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/onas" (click)="topMenu()">
+                <h1>O nas</h1>
+            </a>
+        </li>
+    </ul>
+</div>

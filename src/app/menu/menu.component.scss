@@ -1,0 +1,39 @@
+@import './../../scss/variables.scss';
+
+.page-bg{
+    background-image: url(./../../assets/bg-home-wine.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 1rem;
+}
+
+.menu{
+    border-radius: 2rem;
+    text-align: center;
+    background-color: rgba($color-main-light, .5);
+    padding-bottom: 1rem;
+    h1{
+        font-size: $font-size-big;
+        transform: translateY(3rem);
+    }
+    h2{
+        font-size: $font-size-middle-big;
+    }
+
+    &__potrawa{
+        text-align: left;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        img{
+            display: inline-block;
+            height: $font-size-middle-small;
+            margin-right: .5rem;
+        }
+        p{
+            font-size: $font-size-middle-small;
+            display: inline-block;
+
+        }
+    }
+}

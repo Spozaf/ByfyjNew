@@ -1,0 +1,33 @@
+@import './../../scss/variables.scss';
+
+.page-bg{
+    background-image: url(./../../assets/kitchen-ready-for-cooking.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 1rem;
+}
+
+.onas{
+    border-radius: 2rem;
+    background-color: rgba($color-main-light, .75);
+    padding: 2rem;
+
+    &__top{
+        transform: translateY(3rem);
+    }
+
+    h1{
+        text-align: center;
+        font-size: $font-size-big;
+    }
+    h2{
+        margin-top: 3rem;
+        text-align: center;
+        font-size: $font-size-middle;
+        margin-bottom: 1rem;
+    }
+    p{
+        font-size: $font-size-middle-small;
+    }
+}

@@ -1,0 +1,95 @@
+@import './../../scss/variables.scss';
+
+.navbar {
+  transition: 0.5s;
+  width: 100%;
+  &__icon {
+    height: 3rem;
+    display: inline-block;
+  }
+
+  &__text {
+    font-size: 3rem;
+    display: inline-block;
+    padding-left: 1rem;
+    transform: translateY(-10%);
+  }
+
+  ul {
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $color-main-dark;
+  }
+
+  li {
+    padding-left: 1em;
+    transform: translateY(.7rem);
+    a {
+      text-decoration: none;
+      color: $color-white;
+      &:hover {
+        color: $color-main-light;
+        cursor: pointer;
+      }
+      &:active {
+        color: $color-main-light;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__side {
+    height: 100%;
+    background-color: $color-main-dark;
+    z-index: 10;
+    height: 100%;
+    //width: 40%;
+    width: 0%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    //border-right: 3px solid $color-main-dark;
+
+    img{
+      width: 100%;
+      padding: 1.7rem;
+      transform: translateY(-3rem);
+      border-bottom: 3px solid $color-white;
+    }
+
+    ul{
+      transform: translateY(-2rem);
+      li {
+        a {
+          text-decoration: none;
+          color: $color-white;
+          &:active{
+            color: $color-main-light;
+          }
+          h1{
+            margin-left: 1rem;
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+
+    &--close-btn{
+      z-index: 10000000;
+      font-size: 3rem;
+      width: 100%;
+      height: 3rem;
+      display: inline-block;
+      text-align: right;
+      padding-right: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      color: $color-white;
+    }
+  }
+}
