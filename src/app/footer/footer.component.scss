@@ -10,6 +10,9 @@ footer{
    min-height: 20vh;
    @include shadow;
    position: relative;
+   @include breakpoint(mobile-horizontal) {
+    min-height: 20vw;
+  }
 }
 .column{
 
@@ -17,14 +20,27 @@ footer{
     margin-left: 10vw;
     display: inline-block;
     
+    @include breakpoint(desktop) {
+        width: 50%;
+        margin-left: 0vw;
+        min-height: 20vw;
+        position: relative;
+    }
+    
     &__info{
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        @include breakpoint(desktop) {
+            @include center;
+        }
+        
     }
 
     h1{
         font-size: $font-size-middle-big;
+        @include breakpoint(desktop) {
+            font-size: $font-size-big;
+            font-weight: inherit;
+        }
     }
     &__row{
         a{
@@ -37,12 +53,18 @@ footer{
             img{
                 width: 1.5rem;
                 margin-right: .5rem;
+                @include breakpoint(desktop) {
+                    width: 2.5rem;
+                }
             }
         }
 
         &--text{
             display: inline-block;
             font-size: 1.7rem;
+            @include breakpoint(desktop) {
+                font-size: 2.7rem;
+            }
         }
     }
 }

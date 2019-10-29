@@ -9,6 +9,18 @@
     width: 95vh;
     height: 45vw;
   }
+  @include breakpoint(tablet) {
+    width: 70vw;
+    height: 45vh;
+  }
+  @include breakpoint(tablet-horizontal) {
+    width: 70vh;
+    height: 45vw;
+  }
+  @include breakpoint(desktop) {
+    width: 35vw;
+    height: 55vh;
+  }
 
   img {
     height: 100%;
@@ -32,6 +44,18 @@
     width: 85vh;
     height: 40vw;
   }
+  @include breakpoint(tablet) {
+    width: 65vw;
+    height: 40vh;
+  }
+  @include breakpoint(tablet-horizontal) {
+    width: 65vh;
+    height: 40vw;
+  }
+  @include breakpoint(desktop) {
+    width: 30vw;
+    height: 50vh;
+  }
 }
 
 %text-basics {
@@ -49,6 +73,33 @@
 }
 
 .home {
+  &__welcome{
+    @include center;
+
+    &--text{
+      text-align: center;
+      &-h1{
+        background-color: rgba($color-main-light, .9);
+        padding: 0 2.5rem;
+        border-radius: .5rem;
+        border: 2px solid $color-main-dark;
+        @include shadow-small;
+      }
+      img{
+        height: 20rem;
+        width: auto;
+        display: inline-block;
+      }
+      h1{
+        font-size: 6rem;
+        transform: translateY(1rem);
+        color: $color-main-dark;
+        font-weight: inherit;
+      }
+    }
+  }
+
+
   &__image {
     height: 100vh;
     border-radius: 0 25rem 0 25rem;
@@ -60,19 +111,28 @@
     @include breakpoint(mobile-horizontal) {
       height: 100vw;
     }
+    @include breakpoint(desktop) {
+      height: 100vh;
+      margin-bottom: 5rem;
+      border-radius: 0 0rem 0 0rem;
+    }
 
     &--textUp {
+      padding-top: 3rem;
+      padding-left: 24rem;
       h1 {
         font-size: $font-size-middle;
         text-align: right;
-        padding-right: 18.4rem;
-        padding-bottom: 44.4rem;
-        transform: rotateZ(45deg);
+        transform: rotate(45deg);
         color: $color-main-dark;
-        @include breakpoint(mobile-horizontal) {
-          padding-right: 55.4rem;
-          padding-bottom: 137.4rem;
-        }
+      }
+      @include breakpoint(mobile-horizontal) {
+        padding-top: 0rem;
+        padding-left: 55rem;
+      }
+      @include breakpoint(tablet-horizontal) {
+        padding-top: 0rem;
+        padding-left: 85rem;
       }
     }
     &--textDown {
@@ -103,6 +163,14 @@
         width: 60vh;
         height: 25vw;
       }
+      @include breakpoint(tablet) {
+        width: 40vh;
+        height: 40vw;
+      }
+      @include breakpoint(tablet-horizontal) {
+        width: 40vw;
+        height: 40vh;
+      }
     }
     &--b-2 {
       width: 70vw;
@@ -112,6 +180,14 @@
       @include breakpoint(mobile-horizontal) {
         width: 70vh;
         height: 30vw;
+      }
+      @include breakpoint(tablet) {
+        width: 45vh;
+        height: 45vw;
+      }
+      @include breakpoint(tablet-horizontal) {
+        width: 45vw;
+        height: 45vh;
       }
     }
 
@@ -125,6 +201,16 @@
           width: 45vh;
           height: 20vw;
         }
+        @include breakpoint(tablet) {
+          width: 40vw;
+          height: 26vh;
+          transform: translate(-5.5rem, 3rem);
+        }
+        @include breakpoint(tablet-horizontal) {
+          width: 40vh;
+          height: 26vw;
+          transform: translate(-5.5rem, 3rem);
+        }
       }
     }
   }
@@ -132,11 +218,60 @@
   &__usluga {
     margin-top: 3rem;
     margin-bottom: -7rem;
+    &-mobile {
+      @include breakpoint(desktop) {
+        width: 50%;
+        display: inline-block;
+      }
+    }
+    &-desktop {
+      position: relative;
+      height: 100vh;
+      @include breakpoint(desktop) {
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+      }
+      &--text {
+        @include center;
+        width: 100%;
+        font-size: 2.5rem;
+        padding-right: 6rem;
+        &-r{
+          @include center;
+          width: 100%;
+          font-size: 2.5rem;
+          padding-right: 0rem;
+          padding-left: 6rem;
+        }
+      }
+    }
+
     &--info {
       @extend %info-basics;
       @include shadow-small;
+      @include breakpoint(desktop) {
+        position: relative;
+      }
       &-text {
         @extend %text-basics;
+        @include breakpoint(tablet) {
+          h1 {
+            text-align: center;
+            padding-right: 10rem;
+          }
+        }
+        @include breakpoint(desktop) {
+          h1 {
+            @include center;
+            padding-bottom: 3rem;
+            font-size: 10rem;
+          }
+        }
+        &-tablet {
+          padding-right: 5rem;
+          padding-top: 1rem;
+        }
       }
     }
 
@@ -146,13 +281,40 @@
       border-radius: 50% 0 0 50%;
       border-right: none;
       border-left: 2px solid $color-main-dark;
+      @include breakpoint(desktop) {
+        position: relative;
+        float: right;
+      }
       &-text {
         @extend %text-basics;
         text-align: right;
         margin-right: 2rem;
+        @include breakpoint(tablet) {
+          text-align: center;
+        }
+        @include breakpoint(desktop) {
+          h1 {
+            @include center;
+            padding-bottom: 3rem;
+            font-size: 10rem;
+          }
+        }
+        &-tablet {
+          text-align: left;
+          margin-left: 3rem;
+        }
       }
       @include breakpoint(mobile-horizontal) {
         margin-left: 60vw;
+      }
+      @include breakpoint(tablet) {
+        margin-left: 35vw;
+      }
+      @include breakpoint(tablet-horizontal) {
+        margin-left: 52vw;
+      }
+      @include breakpoint(desktop) {
+        margin-left: 19vw;
       }
     }
 
@@ -169,6 +331,16 @@
       @include breakpoint(mobile-horizontal) {
         margin-left: 55vw;
       }
+      @include breakpoint(tablet) {
+        margin-left: 30vw;
+      }
+      @include breakpoint(tablet-horizontal) {
+        margin-left: 48vw;
+      }
+      @include breakpoint(desktop) {
+        margin-left: 14vw;
+        float: right;
+      }
     }
   }
 
@@ -183,12 +355,18 @@
       height: 50%;
       display: inline-block;
       border-top: 2px solid $color-main-dark;
+      @include breakpoint(desktop) {
+        height: 35%;
+      }
     }
 
     &--icon {
       display: inline-block;
       img {
         height: 14vw;
+        @include breakpoint(desktop) {
+          height: 10vw;
+        }
       }
     }
   }

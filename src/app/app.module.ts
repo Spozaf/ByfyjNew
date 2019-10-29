@@ -9,9 +9,10 @@ import { ButtonComponent } from './shared-components/button/button.component';
 import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
-import { PopupComponent } from './shared-components/popup/popup.component';
 import { PopUpModule } from './shared-components/popup/popup.module';
 import { OnasComponent } from './onas/onas.component';
+
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { OnasComponent } from './onas/onas.component';
     BrowserModule,
     AppRoutingModule,
     PopUpModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

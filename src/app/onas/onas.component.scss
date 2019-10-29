@@ -1,4 +1,5 @@
 @import './../../scss/variables.scss';
+@import './../../scss/mixins.scss';
 
 .page-bg{
     background-image: url(./../../assets/kitchen-ready-for-cooking.jpg);
@@ -12,6 +13,10 @@
     border-radius: 2rem;
     background-color: rgba($color-main-light, .75);
     padding: 2rem;
+    @include breakpoint(desktop) {
+        margin: 5rem 10rem;
+        padding: 5rem 10rem;
+    }
 
     &__top{
         transform: translateY(3rem);
@@ -26,6 +31,9 @@
         text-align: center;
         font-size: $font-size-middle;
         margin-bottom: 1rem;
+        @include breakpoint(desktop) {
+            font-size: $font-size-middle-big;
+        }
     }
     p{
         font-size: $font-size-middle-small;

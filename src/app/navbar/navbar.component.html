@@ -1,8 +1,23 @@
 <div class="navbar">
-    <ul>
+    <ul *ngIf="!tablet">
         <li><a (click)="sideMenu()"><img src="./../../assets/menu.png" alt="" class="navbar__icon">
                 <h1 class="navbar__text">Menu</h1>
             </a></li>
+    </ul>
+
+    <ul class="navbar__tablet" *ngIf="tablet">
+        <li><a routerLink="/">
+            <h1 class="navbar__text">Byfyj</h1>
+        </a></li>
+        <li><a routerLink="/menu">
+            <h1 class="navbar__text">Menu</h1>
+        </a></li>
+        <li><a routerLink="/kontakt">
+            <h1 class="navbar__text">Kontakt</h1>
+        </a></li>
+        <li><a routerLink="/onas">
+            <h1 class="navbar__text">O nas</h1>
+        </a></li>
     </ul>
 </div>
 

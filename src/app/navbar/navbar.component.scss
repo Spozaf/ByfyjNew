@@ -1,4 +1,5 @@
 @import './../../scss/variables.scss';
+@import './../../scss/mixins.scss';
 
 .navbar {
   transition: 0.5s;
@@ -13,6 +14,10 @@
     display: inline-block;
     padding-left: 1rem;
     transform: translateY(-10%);
+    @include breakpoint(desktop) {
+      font-size: $font-size-middle-big;
+      padding-top: 1rem;
+    }
   }
 
   ul {
@@ -25,8 +30,12 @@
   }
 
   li {
-    padding-left: 1em;
+    padding-left: 1rem;
     transform: translateY(.7rem);
+    @include breakpoint(tablet) {
+      float: left;
+      padding-left: 3rem;
+    }
     a {
       text-decoration: none;
       color: $color-white;
@@ -39,6 +48,10 @@
         cursor: pointer;
       }
     }
+  }
+
+  &__tablet{
+    
   }
 
   &__side {
