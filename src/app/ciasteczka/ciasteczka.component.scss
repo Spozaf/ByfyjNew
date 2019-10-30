@@ -1,0 +1,16 @@
+.cookies{
+    min-height: 100vh;
+    &__info{
+        padding: 10rem;
+
+        &--h1{
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        &--text{
+            font-size: 1.5rem;
+        }
+    }
+}
