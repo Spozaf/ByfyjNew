@@ -80,5 +80,12 @@
         font-size: $font-size-middle-big;
       }
     }
+    p{
+      font-size: $font-size-small;
+      @include breakpoint(desktop) {
+        font-size: $font-size-middle-small;
+      }
+      
+    }
   }
 }

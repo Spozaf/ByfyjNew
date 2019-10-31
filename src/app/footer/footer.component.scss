@@ -7,11 +7,11 @@ footer{
    width: 100%;
    background-color: $color-main-dark;
    color: white;
-   min-height: 20vh;
+   min-height: 25vh;
    @include shadow;
    position: relative;
    @include breakpoint(mobile-horizontal) {
-    min-height: 20vw;
+    min-height: 25vw;
   }
 }
 .column{
@@ -23,7 +23,7 @@ footer{
     @include breakpoint(desktop) {
         width: 50%;
         margin-left: 0vw;
-        min-height: 20vw;
+        min-height: 25vw;
         position: relative;
     }
     
