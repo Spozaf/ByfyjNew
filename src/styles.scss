@@ -8,6 +8,10 @@
     font-family: banboll;
     src: url(assets/brannboll/BrannbollSS_PERSONAL.ttf) format("opentype");
   }
+  @font-face {
+    font-family: Arima Madurai;
+    src: url(assets/Arima_Madurai/ArimaMadurai-Regular.ttf) format("opentype");
+  }
 
 *,
 *::after,
@@ -15,7 +19,7 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    font-family: 'Arima Madurai', sans-serif;
+    font-family: 'Arima Madurai';
 }
 
 html {

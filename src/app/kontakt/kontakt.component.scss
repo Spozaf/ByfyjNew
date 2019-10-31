@@ -17,8 +17,10 @@
     }
     h1 {
       font-size: $font-size-big;
-      transform: translateY(2rem);
       text-align: center;
+      @include breakpoint(desktop) {
+        transform: translateY(2rem);
+      }
     }
     h2 {
       font-size: $font-size-middle;
@@ -28,7 +30,7 @@
       }
     }
     p {
-      font-size: $font-size-middle-small;
+      font-size: 1.8rem;
       img {
         height: $font-size-middle-small;
       }
@@ -43,6 +45,7 @@
         display: inline-block;
       }
       iframe {
+        border: 1px solid $color-main-dark;
         height: 100%;
         width: 100%;
       }
@@ -66,7 +69,7 @@
     }
     h1 {
       padding-top: 1rem;
-      font-size: $font-size-middle;
+      font-size: $font-size-big;
       @include breakpoint(desktop) {
         font-size: $font-size-big;
       }

@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/byfyj-nowa-strona",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 <div class="navbar">
     <ul *ngIf="!tablet">
-        <li><a (click)="sideMenu()"><img src="./../../assets/menu.png" alt="" class="navbar__icon">
+        <li><a (click)="sideMenu()"><img src="assets/menu.png" alt="" class="navbar__icon">
                 <h1 class="navbar__text">Menu</h1>
             </a></li>
     </ul>
@@ -12,11 +12,11 @@
         <li><a routerLink="/menu">
             <h1 class="navbar__text">Menu</h1>
         </a></li>
-        <li><a routerLink="/kontakt">
-            <h1 class="navbar__text">Kontakt</h1>
-        </a></li>
         <li><a routerLink="/onas">
             <h1 class="navbar__text">O nas</h1>
+        </a></li>
+        <li><a routerLink="/kontakt">
+            <h1 class="navbar__text">Kontakt</h1>
         </a></li>
     </ul>
 </div>
@@ -25,7 +25,7 @@
     <a class="navbar__side--close-btn">
         <p (click)="topMenu()"> &times;</p>
     </a>
-    <img (click)="topMenu()" src="./../../assets/logoByfyj.png" alt="" class="navbar__side--logo">
+    <img (click)="topMenu()" src="assets/logoByfyj.png" alt="" class="navbar__side--logo">
 
     <ul>
         <li>
@@ -39,13 +39,13 @@
             </a>
         </li>
         <li>
-            <a routerLink="/kontakt" (click)="topMenu()">
-                <h1>Kontakt</h1>
+            <a routerLink="/onas" (click)="topMenu()">
+                <h1>O nas</h1>
             </a>
         </li>
         <li>
-            <a routerLink="/onas" (click)="topMenu()">
-                <h1>O nas</h1>
+            <a routerLink="/kontakt" (click)="topMenu()">
+                <h1>Kontakt</h1>
             </a>
         </li>
     </ul>

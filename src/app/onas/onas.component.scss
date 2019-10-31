@@ -5,6 +5,9 @@
     background-image: url(./../../assets/kitchen-ready-for-cooking.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     padding: 1rem;
 }
@@ -19,7 +22,9 @@
     }
 
     &__top{
-        transform: translateY(3rem);
+        @include breakpoint(desktop) {
+            transform: translateY(3rem);
+        }
     }
 
     h1{

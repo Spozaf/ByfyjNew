@@ -1,25 +1,31 @@
 @import "./../../scss/variables.scss";
 @import "./../../scss/mixins.scss";
 
+
+
 %image-basics {
   width: 95vw;
   height: 45vh;
-  transform: translateY(-9rem);
+  transform: translateY(-9vh);
   @include breakpoint(mobile-horizontal) {
     width: 95vh;
     height: 45vw;
+    transform: translateY(-5vw);
   }
   @include breakpoint(tablet) {
     width: 70vw;
     height: 45vh;
+    transform: translateY(-9vh);
   }
   @include breakpoint(tablet-horizontal) {
     width: 70vh;
     height: 45vw;
+    transform: translateY(-5vw);
   }
   @include breakpoint(desktop) {
     width: 35vw;
     height: 55vh;
+    transform: translateY(-5vw);
   }
 
   img {
@@ -63,16 +69,22 @@
   padding-left: 2rem;
   h1 {
     font-size: $font-size-big;
-    transform: translateY(2.5rem);
     font-weight: inherit;
+    margin-top: 1rem;
+    @include breakpoint(desktop) {
+      transform: translateY(2.5rem);
+    }
   }
   p {
+    margin-top: 1rem;
     font-size: $font-size-small;
     margin-bottom: 1rem;
   }
 }
 
 .home {
+  margin-bottom: 4rem;
+
   &__welcome{
     @include center;
 
@@ -347,6 +359,7 @@
   &__divider {
     height: 14vw;
     position: relative;
+    margin-top: 4rem;
 
     &--line {
       width: 31vw;

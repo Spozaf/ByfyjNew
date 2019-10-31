@@ -12,10 +12,11 @@
   &__text {
     font-size: 3rem;
     display: inline-block;
-    padding-left: 1rem;
+    padding: 1rem;
     transform: translateY(-10%);
     @include breakpoint(desktop) {
       font-size: $font-size-middle-big;
+      padding: 0rem;
       padding-top: 1rem;
     }
   }
@@ -48,10 +49,6 @@
         cursor: pointer;
       }
     }
-  }
-
-  &__tablet{
-    
   }
 
   &__side {
@@ -87,6 +84,7 @@
           h1{
             margin-left: 1rem;
             font-size: 3rem;
+            padding: .5em;
           }
         }
       }

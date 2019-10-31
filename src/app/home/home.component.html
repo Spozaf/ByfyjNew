@@ -1,224 +1,228 @@
-<div class="home__image">
-    <div class="home__welcome">
-        <div class="home__welcome--text">
-            <img src="./../../assets/logoByfyj.png" alt="">
-            <div *ngIf="pc" class="home__welcome--text-h1">
-                <h1>Pyszna Śląska kuchnia</h1>
-            </div>
-            
-        </div>
-    </div>
-
-    <!-- <div class="home__image--b" *ngIf="!pc">
-        <div class="home__image--b-1"></div>
-        <div class="home__image--b-2"></div>
-    </div>
-    <div *ngIf="!pc" class="home__image--logo">
-        <img src="./../../assets/logoByfyj.png" alt="">
-    </div> -->
-    <div *ngIf="!pc" class="home__image--textUp">
-        <h1>Kuchnia</h1>
-    </div>
-    <div *ngIf="!pc" class="home__image--textDown">
-        <h1>Śląska</h1>
-    </div>
-</div>
-<div class="home__usluga">
-    <div class="home__usluga-mobile">
-        <div class="home__usluga--info">
-            <div class="home__usluga--info-text">
-                <h1>Catering</h1>
-                <div *ngIf="tablet" class="home__usluga--info-text-tablet">
-                    <p>W naszej ofercie odnajdą Państwo propozycje usług caterigowych skierowane do osób poszukujących
-                        doskonałej oprawy kulinarnej dla spotkań spędzanych w prywatnym gronie – w domu,
-                        ogrodzie czy też w wynajętym lokalu.</p>
-                    <p>Oczywiście zapewniamy również dostawę pod wskazany adres.</p>
+<section class="home">
+    <div class="home__image">
+        <div class="home__welcome">
+            <div class="home__welcome--text">
+                <img src="assets/logoByfyj.png" alt="">
+                <div *ngIf="pc" class="home__welcome--text-h1">
+                    <h1>Pyszna Śląska kuchnia</h1>
                 </div>
-
-                <p *ngIf="!tablet && !pc">Na każdą twoją okazję</p>
-                <app-button *ngIf="!tablet  && !pc" [disabled]="disableButtons" (click)="openPopUp(1)"></app-button>
+                
             </div>
         </div>
-        <div class="home__usluga--image">
-            <img src="./../../assets/komunia.jpg" alt="">
+    
+        <!-- <div class="home__image--b" *ngIf="!pc">
+            <div class="home__image--b-1"></div>
+            <div class="home__image--b-2"></div>
+        </div>
+        <div *ngIf="!pc" class="home__image--logo">
+            <img src="assets/logoByfyj.png" alt="">
+        </div> -->
+        <div *ngIf="!pc" class="home__image--textUp">
+            <h1>Kuchnia</h1>
+        </div>
+        <div *ngIf="!pc" class="home__image--textDown">
+            <h1>Śląska</h1>
         </div>
     </div>
-    <div *ngIf="pc" class="home__usluga-desktop">
-        <div class="home__usluga-desktop--text">
-            <p>W naszej ofercie odnajdą Państwo propozycje usług caterigowych skierowane do osób poszukujących
-                doskonałej oprawy kulinarnej dla spotkań spędzanych w prywatnym gronie – w domu,
-                ogrodzie czy też w wynajętym lokalu.</p>
-            <br>
-            <p>Oczywiście zapewniamy również dostawę pod wskazany adres.</p>
-        </div>
-
-    </div>
-</div>
-<div class="home__divider">
-    <div class="home__divider--line"></div>
-    <div class="home__divider--icon">
-        <img src="./../../assets/restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle.png" alt="">
-    </div>
-    <div class="home__divider--line"></div>
-</div>
-<div class="home__usluga">
-    <div *ngIf="pc" class="home__usluga-desktop">
-        <div class="home__usluga-desktop--text-r">
-            <p>Trzeba nakarmić dzielną załogę? Wiadomo jak Polak głodny to … nieefektywny.</p>
-            <p>Z pełnym brzuchem każdy jest chętny do pracy. No i współracuje się lepiej.</p>
-            <p>Szczególnie po naszych pysznościach! </p>
-            <br>
-            <p>Pomożemy – zadzwoń i zamów – my dostarczymy.</p>
-        </div>
-    </div>
-    <div class="home__usluga-mobile">
-        <div class="home__usluga--info-r">
-            <div class="home__usluga--info-r-text">
-                <h1>Obiady</h1>
-                <div class="home__usluga--info-r-text-tablet" *ngIf="tablet && !pc">
-                    <p>Trzeba nakarmić dzielną załogę? Wiadomo jak Polak głodny to … nieefektywny.</p>
-
-                    <p>Z pełnym brzuchem każdy jest chętny do pracy. No i współracuje się lepiej.</p>
-
-                    <p>Szczególnie po naszych pysznościach! </p>
-
-                    <p>Pomożemy – zadzwoń i zamów – my dostarczymy.</p>
+    <div class="home__usluga">
+        <div class="home__usluga-mobile">
+            <div class="home__usluga--info">
+                <div class="home__usluga--info-text">
+                    <h1>Catering</h1>
+                    <div *ngIf="tablet" class="home__usluga--info-text-tablet">
+                        <p>W naszej ofercie odnajdą Państwo propozycje usług caterigowych skierowane do osób poszukujących
+                            doskonałej oprawy kulinarnej dla spotkań spędzanych w prywatnym gronie – w domu,
+                            ogrodzie czy też w wynajętym lokalu.</p>
+                        <p>Oczywiście zapewniamy również dostawę pod wskazany adres.</p>
+                    </div>
+    
+                    <p *ngIf="!tablet && !pc">Na każdą twoją okazję</p>
+                    <app-button *ngIf="!tablet  && !pc" [disabled]="disableButtons" (click)="openPopUp(1)"></app-button>
                 </div>
-                <p *ngIf="!tablet && !pc ">Dla twojej załogi</p>
-                <app-button *ngIf="!tablet && !pc" [disabled]="disableButtons" (click)="openPopUp(3)"></app-button>
+            </div>
+            <div class="home__usluga--image">
+                <img src="assets/komunia.jpg" alt="">
             </div>
         </div>
-        <div class="home__usluga--image-r">
-            <img src="./../../assets/krem-z-dyni.jpg" alt="">
-        </div>
-    </div>
-
-
-</div>
-<div class="home__divider">
-    <div class="home__divider--line"></div>
-    <div class="home__divider--icon">
-        <img src="./../../assets/restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle.png" alt="">
-    </div>
-    <div class="home__divider--line"></div>
-</div>
-<div class="home__usluga">
-    <div class="home__usluga-mobile">
-        <div class="home__usluga--info">
-            <div class="home__usluga--info-text">
-                <h1>Imprezy</h1>
-                <div *ngIf="tablet && !pc" class="home__usluga--info-text-tablet">
-                    <p>Przyjdą goście, którym kiszki marsza grają?</p>
-
-                    <p>Komunia, chrzciny, wesele, przyjęcie rodzinne? Będzie impreza?</p>
-
-                    <p>Masz pomysł na oryginalne danie?</p>
-
-                    <p>Nasza babcia jest wirtuozem noża i patelni.
-                        Wyczaruje wykwintne potrawy na zamówienie w mgnieniu oka.
-                    </p>
-                </div>
-                <p *ngIf="!tablet && !pc">Które będziesz wspominał</p>
-                <app-button *ngIf="!tablet && !pc" [disabled]="disableButtons" (click)="openPopUp(2)"></app-button>
-            </div>
-        </div>
-        <div class="home__usluga--image">
-            <img src="./../../assets/szaszlyk.jpg" alt="">
-        </div>
-    </div>
-
-    <div *ngIf="pc" class="home__usluga-desktop">
-        <div class="home__usluga-desktop--text">
-                <p>Przyjdą goście, którym kiszki marsza grają?</p>
-
-                <p>Komunia, chrzciny, wesele, przyjęcie rodzinne? Będzie impreza?</p>
-
-                <p>Masz pomysł na oryginalne danie?</p>
-                <br>
-                <p>Nasza babcia jest wirtuozem noża i patelni.
-                    Wyczaruje wykwintne potrawy na zamówienie w mgnieniu oka.
-                </p>
-        </div>
-    </div>
-
-
-</div>
-<app-popup class="my-prompt" [isOpen]="popUpCatering">
-    <div class="box">
-        <header>
-            <span class="title">
-                <h1>Catering</h1>
-            </span>
-        </header>
-        <main>
-            <span class="text">
-                <p class="text__center">Zadzwoń.</p>
-                <p class="text__center">888 888 888</p>
-                <br>
+        <div *ngIf="pc" class="home__usluga-desktop">
+            <div class="home__usluga-desktop--text">
                 <p>W naszej ofercie odnajdą Państwo propozycje usług caterigowych skierowane do osób poszukujących
                     doskonałej oprawy kulinarnej dla spotkań spędzanych w prywatnym gronie – w domu,
                     ogrodzie czy też w wynajętym lokalu.</p>
                 <br>
                 <p>Oczywiście zapewniamy również dostawę pod wskazany adres.</p>
-            </span>
-        </main>
-        <footer>
-            <app-button (click)="closePopup(1)" Text="Zamknij"></app-button>
-        </footer>
+            </div>
+    
+        </div>
     </div>
-</app-popup>
-
-<app-popup class="my-prompt" [isOpen]="popUpImprezy">
-    <div class="box">
-        <header>
-            <span class="title">
-                <h1>Imprezy</h1>
-            </span>
-        </header>
-        <main>
-            <span class="text">
-                <p class="text__center">Zadzwoń.</p>
-                <p class="text__center">888 888 888</p>
-                <br>
-                <p>Przyjdą goście, którym kiszki marsza grają?</p>
-                <br>
-                <p>Komunia, chrzciny, wesele, przyjęcie rodzinne? Będzie impreza?</p>
-                <br>
-                <p>Masz pomysł na oryginalne danie?</p>
-                <br>
-                <p>Nasza babcia jest wirtuozem noża i patelni.
-                    Wyczaruje wykwintne potrawy na zamówienie w mgnieniu oka.
-                </p>
-            </span>
-        </main>
-        <footer>
-            <app-button (click)="closePopup(2)" Text="Zamknij"></app-button>
-        </footer>
+    <div class="home__divider">
+        <div class="home__divider--line"></div>
+        <div class="home__divider--icon">
+            <img src="assets/restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle.png" alt="">
+        </div>
+        <div class="home__divider--line"></div>
     </div>
-</app-popup>
-<app-popup class="my-prompt" [isOpen]="popUpObiady">
-    <div class="box">
-        <header>
-            <span class="title">
-                <h1>Obiady</h1>
-            </span>
-        </header>
-        <main>
-            <span class="text">
-                <p class="text__center">Zadzwoń.</p>
-                <p class="text__center">888 888 888</p>
-                <br>
+    <div class="home__usluga">
+        <div *ngIf="pc" class="home__usluga-desktop">
+            <div class="home__usluga-desktop--text-r">
                 <p>Trzeba nakarmić dzielną załogę? Wiadomo jak Polak głodny to … nieefektywny.</p>
-                <br>
                 <p>Z pełnym brzuchem każdy jest chętny do pracy. No i współracuje się lepiej.</p>
-                <br>
                 <p>Szczególnie po naszych pysznościach! </p>
                 <br>
                 <p>Pomożemy – zadzwoń i zamów – my dostarczymy.</p>
-            </span>
-        </main>
-        <footer>
-            <app-button (click)="closePopup(3)" Text="Zamknij"></app-button>
-        </footer>
+            </div>
+        </div>
+        <div class="home__usluga-mobile">
+            <div class="home__usluga--info-r">
+                <div class="home__usluga--info-r-text">
+                    <h1>Obiady</h1>
+                    <div class="home__usluga--info-r-text-tablet" *ngIf="tablet && !pc">
+                        <p>Trzeba nakarmić dzielną załogę? Wiadomo jak Polak głodny to … nieefektywny.</p>
+    
+                        <p>Z pełnym brzuchem każdy jest chętny do pracy. No i współracuje się lepiej.</p>
+    
+                        <p>Szczególnie po naszych pysznościach! </p>
+    
+                        <p>Pomożemy – zadzwoń i zamów – my dostarczymy.</p>
+                    </div>
+                    <p *ngIf="!tablet && !pc ">Dla twojej załogi</p>
+                    <app-button *ngIf="!tablet && !pc" [disabled]="disableButtons" (click)="openPopUp(3)"></app-button>
+                </div>
+            </div>
+            <div class="home__usluga--image-r">
+                <img src="assets/krem-z-dyni.jpg" alt="">
+            </div>
+        </div>
+    
+    
     </div>
-</app-popup>
+    <div class="home__divider">
+        <div class="home__divider--line"></div>
+        <div class="home__divider--icon">
+            <img src="assets/restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle.png" alt="">
+        </div>
+        <div class="home__divider--line"></div>
+    </div>
+    <div class="home__usluga">
+        <div class="home__usluga-mobile">
+            <div class="home__usluga--info">
+                <div class="home__usluga--info-text">
+                    <h1>Imprezy</h1>
+                    <div *ngIf="tablet && !pc" class="home__usluga--info-text-tablet">
+                        <p>Przyjdą goście, którym kiszki marsza grają?</p>
+    
+                        <p>Komunia, chrzciny, wesele, przyjęcie rodzinne? Będzie impreza?</p>
+    
+                        <p>Masz pomysł na oryginalne danie?</p>
+    
+                        <p>Nasza babcia jest wirtuozem noża i patelni.
+                            Wyczaruje wykwintne potrawy na zamówienie w mgnieniu oka.
+                        </p>
+                    </div>
+                    <p *ngIf="!tablet && !pc">Które będziesz wspominał</p>
+                    <app-button *ngIf="!tablet && !pc" [disabled]="disableButtons" (click)="openPopUp(2)"></app-button>
+                </div>
+            </div>
+            <div class="home__usluga--image">
+                <img src="assets/szaszlyk.jpg" alt="">
+            </div>
+        </div>
+    
+        <div *ngIf="pc" class="home__usluga-desktop">
+            <div class="home__usluga-desktop--text">
+                    <p>Przyjdą goście, którym kiszki marsza grają?</p>
+    
+                    <p>Komunia, chrzciny, wesele, przyjęcie rodzinne? Będzie impreza?</p>
+    
+                    <p>Masz pomysł na oryginalne danie?</p>
+                    <br>
+                    <p>Nasza babcia jest wirtuozem noża i patelni.
+                        Wyczaruje wykwintne potrawy na zamówienie w mgnieniu oka.
+                    </p>
+            </div>
+        </div>
+    
+    
+    </div>
+    <app-popup class="my-prompt" [isOpen]="popUpCatering">
+        <div class="box">
+            <header>
+                <span class="title">
+                    <h1>Catering</h1>
+                </span>
+            </header>
+            <main>
+                <span class="text">
+                    <p class="text__center">Zadzwoń</p>
+                    <p class="text__center">601 888 028</p>
+                    <br>
+                    <p>W naszej ofercie odnajdą Państwo propozycje usług caterigowych skierowane do osób poszukujących
+                        doskonałej oprawy kulinarnej dla spotkań spędzanych w prywatnym gronie – w domu,
+                        ogrodzie czy też w wynajętym lokalu.</p>
+                    <br>
+                    <p>Oczywiście zapewniamy również dostawę pod wskazany adres.</p>
+                </span>
+            </main>
+            <footer>
+                <app-button (click)="closePopup(1)" Text="Zamknij"></app-button>
+            </footer>
+        </div>
+    </app-popup>
+    
+    <app-popup class="my-prompt" [isOpen]="popUpImprezy">
+        <div class="box">
+            <header>
+                <span class="title">
+                    <h1>Imprezy</h1>
+                </span>
+            </header>
+            <main>
+                <span class="text">
+                    <p class="text__center">Zadzwoń</p>
+                    <p class="text__center">601 888 028</p>
+                    <br>
+                    <p>Przyjdą goście, którym kiszki marsza grają?</p>
+                    <br>
+                    <p>Komunia, chrzciny, wesele, przyjęcie rodzinne? Będzie impreza?</p>
+                    <br>
+                    <p>Masz pomysł na oryginalne danie?</p>
+                    <br>
+                    <p>Nasza babcia jest wirtuozem noża i patelni.
+                        Wyczaruje wykwintne potrawy na zamówienie w mgnieniu oka.
+                    </p>
+                </span>
+            </main>
+            <footer>
+                <app-button (click)="closePopup(2)" Text="Zamknij"></app-button>
+            </footer>
+        </div>
+    </app-popup>
+    <app-popup class="my-prompt" [isOpen]="popUpObiady">
+        <div class="box">
+            <header>
+                <span class="title">
+                    <h1>Obiady</h1>
+                </span>
+            </header>
+            <main>
+                <span class="text">
+                    <p class="text__center">Zadzwoń</p>
+                    <p class="text__center">601 888 028</p>
+                    <br>
+                    <p>Trzeba nakarmić dzielną załogę? Wiadomo jak Polak głodny to … nieefektywny.</p>
+                    <br>
+                    <p>Z pełnym brzuchem każdy jest chętny do pracy. No i współracuje się lepiej.</p>
+                    <br>
+                    <p>Szczególnie po naszych pysznościach! </p>
+                    <br>
+                    <p>Pomożemy – zadzwoń i zamów – my dostarczymy.</p>
+                </span>
+            </main>
+            <footer>
+                <app-button (click)="closePopup(3)" Text="Zamknij"></app-button>
+            </footer>
+        </div>
+    </app-popup>
+
+</section>
+
