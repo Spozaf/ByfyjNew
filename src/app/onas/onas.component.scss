@@ -22,7 +22,7 @@
 .onas{
     margin: 1rem;
     border-radius: 2rem;
-    background-color: rgba($color-main-light, .75);
+    background-color: rgba($color-main-light, .85);
     padding: 2rem;
     @include breakpoint(desktop) {
         margin: 5rem 10rem;
