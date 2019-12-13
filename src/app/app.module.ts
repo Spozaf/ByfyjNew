@@ -16,6 +16,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { CiasteczkaComponent } from './ciasteczka/ciasteczka.component';
 
 import {NgcCookieConsentModule, NgcCookieConsentConfig} from 'ngx-cookieconsent';
+import { FacebookModule } from 'ngx-facebook';
 
 const cookieConfig:NgcCookieConsentConfig = {
   cookie: {
@@ -58,7 +59,8 @@ const cookieConfig:NgcCookieConsentConfig = {
     AppRoutingModule,
     PopUpModule,
     LayoutModule,
-    NgcCookieConsentModule.forRoot(cookieConfig)
+    NgcCookieConsentModule.forRoot(cookieConfig),
+    FacebookModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
